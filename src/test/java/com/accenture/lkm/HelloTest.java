@@ -16,23 +16,23 @@ class HelloTest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		logger.info("start test method");
+		logger.info("start test method..");
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
-		logger.info("end test method");
+		logger.info("end test method..");
 	}
 
 	@Test
 	void test() {
-		logger.info("inside test() test method");
+		logger.info("inside test() test method..");
 		assertTrue(true);
 	}
 
 	@Test
 	void test2() {
-		logger.info("inside test2() test method");
+		logger.info("inside test2() test method..");
 		assertFalse(true);
 	}
 }
