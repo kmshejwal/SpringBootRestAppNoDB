@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 @SpringBootTest
 class HelloTest {
 
-	Logger logger= Logger.getLogger("HelloTest");
+	Logger logger= Logger.getLogger("HelloTest..");
 	
 	@BeforeEach
 	void setUp() throws Exception {
