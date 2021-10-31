@@ -1,4 +1,8 @@
 steps:
 - name: maven:3-jdk-11
   entrypoint: mvn
-  args: ["test"]
+  args: ["package"]
+- name: maven:3-jdk-11
+  entrypoint: mvn
+  args: ["appengine:deploy"]
+  

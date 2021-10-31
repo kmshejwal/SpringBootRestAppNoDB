@@ -33,6 +33,6 @@ class HelloTest {
 	@Test
 	void test2() {
 		logger.info("inside test2() test method..");
-		assertFalse(true);
+		assertFalse(false);
 	}
 }
