@@ -16,7 +16,7 @@ class HelloTest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		logger.info("start test method..");
+		logger.info("start test method...");
 	}
 
 	@AfterEach
@@ -27,7 +27,7 @@ class HelloTest {
 	@Test
 	void test() {
 		logger.info("inside test() test method..");
-		assertTrue(true);
+		assertTrue(false);
 	}
 
 	@Test
