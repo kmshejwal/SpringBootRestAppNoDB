@@ -22,7 +22,7 @@ public class TaskController {
 	@Autowired
 	private TaskServiceImpl taskServiceImpl;
 
-	@RequestMapping(value = "task/controller/getDetails", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "task/getDetails", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<TaskBean>> getTaskDetails() {
 		List<TaskBean> listTask = new ArrayList<TaskBean>(taskServiceImpl.getAllTasks());
 
@@ -30,7 +30,7 @@ public class TaskController {
 	}
 
 	// http://localhost:8080/projectName/task/controller/getDetailsById/1001
-	@RequestMapping(value = "task/controller/getDetailsById/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "task/getDetailsById/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<TaskBean> getTaskDetailByTaskId(@PathVariable("id") int myId) {
 		TaskBean task = taskServiceImpl.getTask(myId);
 
@@ -41,13 +41,13 @@ public class TaskController {
 		}
 	}
 
-	@RequestMapping(value = "/task/controller/addTask", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_HTML_VALUE)
+	@RequestMapping(value = "/task/addTask", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_HTML_VALUE)
 	public ResponseEntity<String> addTask(@RequestBody TaskBean task) {
 		TaskBean newTask = taskServiceImpl.addTask(task);
 		return new ResponseEntity<String>("Task added successfully with id:" + newTask.getId(), HttpStatus.CREATED);
 	}
 
-	@RequestMapping(value = "/task/controller/deleteTask/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/task/deleteTask/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<TaskBean> deleteTask(@PathVariable("id") int taskId) {
 		TaskBean task2 = taskServiceImpl.getTask(taskId);
 		if (task2 == null) {
