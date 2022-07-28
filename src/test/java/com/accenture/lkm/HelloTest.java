@@ -27,7 +27,7 @@ class HelloTest {
 	@Test
 	void test() {
 		logger.info("inside test() test method...");
-		assertTrue(true);
+		assertTrue(false);
 	}
 
 	@Test
