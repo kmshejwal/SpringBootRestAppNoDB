@@ -17,7 +17,7 @@ public class TaskDaoImpl implements TaskDao {
 	static {
 		tasks.put(1001, new TaskBean(1001,"Schedule daily Status Call","Completed"));
 		tasks.put(1002, new TaskBean(1002,"Update priorities","In progress"));
-		//tasks.put(1003, new TaskBean(1003,"Set up call with client","New"));
+		tasks.put(1003, new TaskBean(1003,"Set up call with client","New"));
 		//tasks.put(1003, new TaskBean(1004,"Byte Sized session demo","In progress"));
 		lastId= 1003;
 	}
