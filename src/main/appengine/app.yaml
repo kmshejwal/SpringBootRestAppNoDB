@@ -1,3 +1,4 @@
 runtime: java11
 instance_class: F1
 service: app2
+version: v2
