@@ -18,7 +18,8 @@ public class TaskDaoImpl implements TaskDao {
 		tasks.put(1001, new TaskBean(1001,"Schedule daily Status Calls","Completed"));
 		tasks.put(1002, new TaskBean(1002,"Update priorities","In progress"));
 		tasks.put(1003, new TaskBean(1003,"Set up call with clients","New"));
-		lastId= 1003;
+		tasks.put(1004, new TaskBean(1004,"Byte sized session demo","In progress"));
+		lastId= 1004;
 	}
 	
 	@Override
