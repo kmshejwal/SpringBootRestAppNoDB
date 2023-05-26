@@ -16,7 +16,7 @@ class HelloTest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		logger.info("start test method!!!!");
+		logger.info("start test method!!!");
 	}
 
 	@AfterEach
