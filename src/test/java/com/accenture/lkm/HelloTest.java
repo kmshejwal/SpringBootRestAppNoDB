@@ -21,7 +21,7 @@ class HelloTest {
 
 	@AfterEach
 	void tearDown() throws Exception {
-		logger.info("end test method..");
+		logger.info("end test method...");
 	}
 
 	@Test
